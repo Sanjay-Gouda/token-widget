@@ -1,0 +1,146 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+} */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* h2{
+  color:red;
+} */
+
+.widget-wrapper{
+  /* padding: 8px 24px; */
+    min-width: 333px;
+    border:2px solid gray;
+}
+.mini-box-wrapper{
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p,h1{
+  margin:0;
+}
+
+.list-heading{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+
+
+.lg-text{
+  font-weight: 500;
+  font-size: 18px;
+}
+.xl-text{
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.image-wrapper{
+  width:46px;
+  height:46px;
+  /* overflow: hidden; */
+}
+
+.img-contain{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.widget-preview{
+  border: 2px solid rgb(231, 224, 224);
+    width: 450px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.flex-row{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  padding:10px 0;
+  border-bottom: 1px solid rgb(231, 224, 224);;
+}
+
+.last-child{
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+  /* padding:10px 0;  */
+}
+
