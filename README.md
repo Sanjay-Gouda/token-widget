@@ -61,6 +61,9 @@ To get started with this project, follow the steps below:
     <div id="root" token-name="bitcoin"></div>
 
 
+    token-name = bitcoin || ethereum || tether || usd-coin 
+
+
 
 3. To apply styling include stylesheet link in your Head tag:
 
@@ -72,8 +75,3 @@ To get started with this project, follow the steps below:
     />
     
   
-
-
-
-
-
