@@ -33,10 +33,10 @@ const TokenWidegt = ({ token }: Tprops) => {
     );
     const tokenDetail = await res.json();
     setTokenDetail({
-      currentPrice: tokenDetail.coingecko_rank,
-      marketCap: tokenDetail.market_cap_rank,
+      currentPrice: tokenDetail?.market_data?.current_price?.usd,
+      marketCap: tokenDetail?.market_data?.market_cap?.usd,
       tokenName: tokenDetail.name,
-      volume: tokenDetail.developer_score,
+      volume: tokenDetail.market_data?.total_volume?.usd,
       rank: tokenDetail.coingecko_rank,
       score: tokenDetail.coingecko_score,
       logo: tokenDetail.image.small,
@@ -44,6 +44,7 @@ const TokenWidegt = ({ token }: Tprops) => {
       watchListUsers: tokenDetail.watchlist_portfolio_users,
     });
     console.log(tokenDetail);
+    console.log(tokenDetail?.market_data.current_price?.usd);
   };
 
   useEffect(() => {
@@ -90,17 +91,28 @@ const TokenWidegt = ({ token }: Tprops) => {
                   fontSize: "14px",
                 }}
               >
-                {tokenDetails.symbol}
+                USD
               </span>
             </p>
           </div>
           <div className="flex-row">
             <p className="list-heading">Current price</p>
-            <p className="lg-text">{tokenDetails.marketCap}</p>
+            <p className="lg-text">
+              {tokenDetails.currentPrice}
+              <span
+                style={{
+                  textTransform: "uppercase",
+                  marginLeft: "4px",
+                  fontSize: "14px",
+                }}
+              >
+                USD
+              </span>
+            </p>
           </div>
           <div className="flex-row">
-            <p className="list-heading">24-hour Trading volume</p>
-            <p className="lg-text">{tokenDetails.marketCap}</p>
+            <p className="list-heading">Total volume</p>
+            <p className="lg-text">{tokenDetails.volume}</p>
           </div>
           <div className="last-child">
             <p className="list-heading">Watchlist Users</p>
